@@ -2,7 +2,24 @@
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+offset_left = 311.0
+offset_top = 231.0
+offset_right = 529.0
+offset_bottom = 271.0
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
+text = "test 123"
+
+[node name="Button2" type="Button" parent="AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
+text = "test 123"
+
+[node name="Button3" type="Button" parent="AspectRatioContainer/HBoxContainer"]
+layout_mode = 2
 text = "test 123"
