@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfk6vtwnykqyx"]
+[gd_scene load_steps=3 format=3 uid="uid://cfk6vtwnykqyx"]
+
+[ext_resource type="Script" path="res://UI/start_scene/start_scene.gd" id="1_pv58u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbtx1"]
 bg_color = Color(0.686275, 0.694118, 1, 0.52549)
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pv58u")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -66,3 +69,6 @@ text = "Options
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Quit Game"
+
+[connection signal="pressed" from="MarginContainer/ButtonGroup/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/ButtonGroup/OptionsButton" to="." method="_on_options_button_pressed"]

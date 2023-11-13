@@ -2,73 +2,9 @@
 
 [node name="MainScene" type="Node2D"]
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
-layout_direction = 2
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 268.0
-offset_top = 545.0
-offset_right = 1152.0
-offset_bottom = 576.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch_mode = 0
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="AspectRatioContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="AspectRatioContainer/HBoxContainer3"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer2"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button2" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer2"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button3" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer2"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button4" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer2"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button5" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer2"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button6" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer2"]
-layout_mode = 2
-text = "test 123"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer/HBoxContainer3"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button2" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button3" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button4" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button5" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer"]
-layout_mode = 2
-text = "test 123"
-
-[node name="Button6" type="Button" parent="AspectRatioContainer/HBoxContainer3/HBoxContainer"]
-layout_mode = 2
-text = "test 123"
+[node name="Label" type="Label" parent="."]
+offset_left = 823.0
+offset_top = 499.0
+offset_right = 1074.0
+offset_bottom = 525.0
+text = "here comes the rest of the game"

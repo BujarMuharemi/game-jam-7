@@ -1,15 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dd3hbk4vuabt0"]
+[gd_scene load_steps=3 format=3 uid="uid://dd3hbk4vuabt0"]
+
+[ext_resource type="Script" path="res://UI/options_scene/options_scene.gd" id="1_iniri"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbtx1"]
 bg_color = Color(0.686275, 0.694118, 1, 0.52549)
 
-[node name="pause_scene" type="Control"]
+[node name="options_scene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iniri")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -93,3 +96,5 @@ theme_override_constants/margin_bottom = 50
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Back"
+
+[connection signal="pressed" from="MarginContainer/GameNameGroup2/MarginContainer/Button" to="." method="_on_back_button_pressed"]
