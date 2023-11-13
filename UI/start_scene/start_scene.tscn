@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfk6vtwnykqyx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbtx1"]
+bg_color = Color(0.686275, 0.694118, 1, 0.52549)
+
+[node name="start_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundPanelContainer" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tbtx1")
+
+[node name="GameNameGroup" type="VFlowContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/GameNameGroup"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.1
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="GameNameLabel" type="Label" parent="MarginContainer/GameNameGroup/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "The Name of the Game goes here"
+
+[node name="ButtonGroup" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="StartGameButton" type="Button" parent="MarginContainer/ButtonGroup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Start Game
+"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/ButtonGroup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Options
+"
+
+[node name="QuitGameButton" type="Button" parent="MarginContainer/ButtonGroup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Quit Game"
