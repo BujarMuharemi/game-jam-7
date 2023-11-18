@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpnuxiq0v5mj8"]
+[gd_scene load_steps=3 format=3 uid="uid://bpnuxiq0v5mj8"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbtx1"]
+[ext_resource type="Script" path="res://UI/pause_scene/pause_scene.gd" id="1_lx5cf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78f0j"]
 bg_color = Color(0.686275, 0.694118, 1, 0.52549)
 
 [node name="pause_scene" type="Control"]
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lx5cf")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -22,7 +25,7 @@ grow_vertical = 2
 [node name="BackgroundPanelContainer" type="PanelContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tbtx1")
+theme_override_styles/panel = SubResource("StyleBoxFlat_78f0j")
 
 [node name="GameNameGroup" type="VFlowContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -50,7 +53,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_constants/separation = 15
 
-[node name="StartGameButton" type="Button" parent="MarginContainer/ButtonGroup"]
+[node name="BackToGameButton" type="Button" parent="MarginContainer/ButtonGroup"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Continue Game
@@ -63,6 +66,10 @@ text = "Options
 "
 
 [node name="BackToMainButton" type="Button" parent="MarginContainer/ButtonGroup"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Back to main menu "
+
+[connection signal="button_down" from="MarginContainer/ButtonGroup/BackToGameButton" to="." method="_on_back_to_game_button_button_down"]
+[connection signal="button_down" from="MarginContainer/ButtonGroup/OptionsButton" to="." method="_on_options_button_button_down"]

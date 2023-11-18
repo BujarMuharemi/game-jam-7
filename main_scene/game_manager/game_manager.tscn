@@ -17,3 +17,5 @@ visible = false
 
 [node name="pause_scene" parent="." instance=ExtResource("4_7xtkn")]
 visible = false
+
+[connection signal="back_from_options_pressed" from="options_scene" to="." method="_on_options_scene_back_from_options_pressed"]
