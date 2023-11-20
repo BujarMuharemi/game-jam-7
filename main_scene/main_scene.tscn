@@ -1,10 +1,39 @@
-[gd_scene format=3 uid="uid://75ba58pbuguj"]
+[gd_scene load_steps=5 format=3 uid="uid://75ba58pbuguj"]
+
+[ext_resource type="Texture2D" uid="uid://ejsr4ey8oy27" path="res://game_world/background/background-test.png" id="1_0bwqw"]
+[ext_resource type="PackedScene" uid="uid://gwnus1pt1n8i" path="res://game_world/entities/item/item.tscn" id="2_jf80k"]
+[ext_resource type="Script" path="res://main_scene/collision_test.gd" id="2_mwsso"]
+[ext_resource type="PackedScene" uid="uid://d184y2lkoom71" path="res://game_world/entities/cardboard_box/cardboard_box.tscn" id="4_diu27"]
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 823.0
-offset_top = 499.0
-offset_right = 1074.0
-offset_bottom = 525.0
-text = "here comes the rest of the game"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Background-test" type="Sprite2D" parent="."]
+position = Vector2(969, 542)
+scale = Vector2(0.493229, 0.492593)
+texture = ExtResource("1_0bwqw")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(155, 825)
+script = ExtResource("2_mwsso")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-4, 2)
+polygon = PackedVector2Array(2, -3, 291, -3, 189, 138, -105, 136)
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1604, 834)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2"]
+position = Vector2(-4, 2)
+polygon = PackedVector2Array(2, -3, 291, -3, 189, 138, -105, 136)
+
+[node name="cardboard_box" parent="." instance=ExtResource("4_diu27")]
+position = Vector2(750, 588)
+
+[node name="item" parent="." instance=ExtResource("2_jf80k")]
+position = Vector2(1143, 617)
+
+[node name="item2" parent="." instance=ExtResource("2_jf80k")]
+position = Vector2(1348, 870)

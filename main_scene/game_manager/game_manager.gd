@@ -7,6 +7,7 @@ var options_scene
 var pause_scene
 
 ## TODO: create independent btns which can be resued in all scenes !
+## TODO: maybe connect signals directly threw UI ? 
 
 func _ready():
 	options_scene = get_node("options_scene")
